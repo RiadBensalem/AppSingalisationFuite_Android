@@ -1,5 +1,6 @@
 package com.example.ryad.ggg;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -48,5 +49,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void assgnClick(View view) {
+        Intent intent=new Intent(this,assgn_form.class);
+        startActivity(intent);
+
+    }
+
+    public void fuiteClick(View view) {
+        Intent intent=new Intent(this,fuite_form.class);
+        startActivity(intent);
     }
 }
