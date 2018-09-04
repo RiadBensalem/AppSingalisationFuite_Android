@@ -41,7 +41,7 @@ public class fuite_form extends AppCompatActivity {
         int rbId = rg1.getCheckedRadioButtonId();
         int rbId2=rg2.getCheckedRadioButtonId();
         rb=(RadioButton) findViewById(rbId);
-        Toast.makeText(this, rb.getText(), Toast.LENGTH_SHORT).show();
+        if (rbId>=0) Toast.makeText(this, rb.getText(), Toast.LENGTH_SHORT).show();
         tv.setText(rb.getText());
 
 
