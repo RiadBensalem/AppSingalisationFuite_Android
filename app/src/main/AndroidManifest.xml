@@ -24,7 +24,12 @@
         <activity
             android:name=".fuite_form"
             android:label="@string/title_activity_fuite_form"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ryad.ggg.MainActivity" />
+        </activity>
         <activity
             android:name=".assgn_form"
             android:label="@string/title_activity_assgn_form"
