@@ -8,4 +8,188 @@
     tools:context="com.example.ryad.ggg.assgn_form"
     tools:showIn="@layout/activity_assgn_form">
 
+
+    <ScrollView
+        android:layout_width="468dp"
+        android:layout_height="478dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="40dp">
+
+        <TableLayout
+            android:layout_width="390dp"
+            android:layout_height="478dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-5dp"
+            tools:layout_editor_absoluteY="38dp">
+
+            <TableRow>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="189dp"
+                    android:layout_column="0"
+                    android:text="   Nom"
+
+                    android:textColor="@android:color/black" />
+
+
+                <EditText
+                    android:id="@+id/fuiteass_name"
+                    android:layout_width="201dp"
+                    android:layout_column="1" />
+            </TableRow>
+
+            <TableRow>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="189dp"
+                    android:layout_column="0"
+                    android:text="   Client code"
+
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/fuiteass_Code_client"
+                    android:layout_width="201dp"
+                    android:layout_column="1" />
+            </TableRow>
+
+            <TableRow>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="189dp"
+                    android:layout_column="0"
+                    android:text="   Numero de Téléphone"
+
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/fuiteass_Num_Tele"
+                    android:layout_width="201dp"
+                    android:layout_column="1" />
+            </TableRow>
+
+            <TableRow>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="189dp"
+                    android:layout_column="0"
+                    android:text="   Addresse de la fuite"
+
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/fuiteass_Adr"
+                    android:layout_width="201dp"
+                    android:layout_column="1" />
+            </TableRow>
+
+            <TableRow>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="189dp"
+                    android:layout_height="35dp"
+                    android:layout_column="0"
+
+                    android:paddingVertical="10dp"
+                    android:text="   Type de la fuite"
+                    android:textColor="@android:color/black" />
+
+                <RadioGroup
+                    android:id="@+id/grp"
+                    android:layout_column="1">
+
+
+                    <RadioButton
+                        android:id="@+id/radioButton6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="affaissement de regard" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Debordement de regard " />
+
+                    <RadioButton
+                        android:id="@+id/radioButton8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Regard bouché" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manque dr tampan sur regard" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="189dp"
+                    android:layout_column="0"
+                    android:text="   Plus de détail sur la fuite"
+
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/fuiteass_Détail"
+                    android:layout_width="201dp"
+                    android:layout_column="1" />
+            </TableRow>
+
+
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_camera"
+                android:onClick="take_picClick"/>
+
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="161dp"
+                android:width="40dp"
+
+                android:text="Envoyer" />
+
+
+        </TableLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

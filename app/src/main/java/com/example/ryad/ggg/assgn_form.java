@@ -1,18 +1,42 @@
 package com.example.ryad.ggg;
 
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class assgn_form extends AppCompatActivity {
+    EditText fuiteass_name;
+    EditText fuiteass_Code_client;
+    EditText fuiteass_Num_Tele;
+    EditText fuiteass_Adr;
+    EditText fuiteass_Détail;
+
+    RadioButton rb;
+    RadioGroup radioButtonGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assgn_form);
+        fuiteass_name=findViewById(R.id.fuiteass_name);
+        fuiteass_Code_client=findViewById(R.id.fuiteass_Code_client);
+        fuiteass_Num_Tele=findViewById(R.id.fuiteass_Num_Tele);
+        fuiteass_Adr=findViewById(R.id.fuiteass_Adr);
+        fuiteass_Détail=findViewById(R.id.fuiteass_Détail);
+        radioButtonGroup=findViewById(R.id.grp);
+        int radioButtonID = radioButtonGroup.getCheckedRadioButtonId();
+        rb = radioButtonGroup.findViewById(radioButtonID);
+
+        Toast.makeText(this, rb.getText(), Toast.LENGTH_SHORT).show();
+        ///////////////////////////////////////////////////
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -27,4 +51,8 @@ public class assgn_form extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+
+
+
 }
+

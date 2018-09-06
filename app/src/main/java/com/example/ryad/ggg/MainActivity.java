@@ -61,4 +61,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(this,fuite_form.class);
         startActivity(intent);
     }
+
+    public void take_picClick(View view) {
+    }
 }
