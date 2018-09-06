@@ -1,13 +1,17 @@
 package com.example.ryad.ggg;
 
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -18,6 +22,7 @@ public class assgn_form extends AppCompatActivity {
     EditText fuiteass_Num_Tele;
     EditText fuiteass_Adr;
     EditText fuiteass_Détail;
+    ImageView img;
 
     RadioButton rb;
     RadioGroup radioButtonGroup;
@@ -32,6 +37,7 @@ public class assgn_form extends AppCompatActivity {
         fuiteass_Adr=findViewById(R.id.fuiteass_Adr);
         fuiteass_Détail=findViewById(R.id.fuiteass_Détail);
         radioButtonGroup=findViewById(R.id.grp);
+        img=(ImageView) findViewById(R.id.imageView2);
         int radioButtonID = radioButtonGroup.getCheckedRadioButtonId();
         rb = radioButtonGroup.findViewById(radioButtonID);
 
@@ -52,7 +58,16 @@ public class assgn_form extends AppCompatActivity {
     }
 
 
+    public void take_picClick(View view) {
+        Intent i= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(i,0);
+    }
 
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Bitmap b=(Bitmap) data.getExtras().get("data");
+        img.setImageBitmap(b);
+    }
 }
 

@@ -10,17 +10,12 @@
 
 
     <ScrollView
-        android:layout_width="468dp"
-        android:layout_height="478dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="40dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <TableLayout
-            android:layout_width="390dp"
-            android:layout_height="478dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="-5dp"
-            tools:layout_editor_absoluteY="38dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TableRow>
                 android:layout_width="match_parent"

@@ -26,6 +26,7 @@
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="signaler un assignissment"
-            android:onClick="assgnClick"/>
+            android:onClick="assgnClick"
+            android:background="@drawable/custombutton"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
