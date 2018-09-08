@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.ryad.ggg.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:background="#90caf9">
 
 
     <LinearLayout
@@ -19,7 +20,9 @@
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="signaler une fuite"
-            android:onClick="fuiteClick"/>
+            android:onClick="fuiteClick"
+            android:background="@drawable/custombutton"
+            android:layout_margin="15dp"/>
 
         <Button
             android:id="@+id/assgn_form_button"

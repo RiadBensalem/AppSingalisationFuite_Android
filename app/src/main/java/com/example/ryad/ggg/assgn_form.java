@@ -50,8 +50,16 @@ public class assgn_form extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                sendClick(view);
+            }
+        });
+        ////////////////////////// floating button to take pic //////////////////////////////////////////////////////
+        FloatingActionButton fb_pic = (FloatingActionButton) findViewById(R.id.fb_pic);
+        fb_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(i,0);
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -68,6 +76,11 @@ public class assgn_form extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         Bitmap b=(Bitmap) data.getExtras().get("data");
         img.setImageBitmap(b);
+    }
+    public void sendClick(View view) {
+
+        MainActivity.sendClick(view);
+
     }
 }
 

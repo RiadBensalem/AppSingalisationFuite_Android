@@ -215,15 +215,19 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@android:drawable/ic_menu_camera"
                 android:onClick="take_picClick"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:background="@drawable/displayimg"
+                android:visibility="invisible"/>
 
-            <Button
+            <!--<Button
                 android:id="@+id/send_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="sendClick"
                 android:text="envoi"
                 android:background="@drawable/custombutton"/>
+                !-->
         </LinearLayout>
     </ScrollView>
 

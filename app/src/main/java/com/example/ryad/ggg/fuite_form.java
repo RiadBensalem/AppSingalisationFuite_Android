@@ -36,31 +36,44 @@ public class fuite_form extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                sendClick(view);
+            }
+        });
+        ////////////////////////// floating button to take pic //////////////////////////////////////////////////////
+        FloatingActionButton fb_pic = (FloatingActionButton) findViewById(R.id.fb_pic);
+        fb_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(i,0);
+
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
-    public void sendClick(View view) {
-        int rbId = rg1.getCheckedRadioButtonId();
+    // this methode collect the infos from the form and process them for sending
+     public void sendClick(View view) {
+        /*int rbId = rg1.getCheckedRadioButtonId();
         int rbId2=rg2.getCheckedRadioButtonId();
         rb=(RadioButton) findViewById(rbId);
         if (rbId>=0) Toast.makeText(this, rb.getText(), Toast.LENGTH_SHORT).show();
-        tv.setText(rb.getText());
+        tv.setText(rb.getText());*/
+        MainActivity.sendClick(view);
+         //Snackbar.make(view, "sent!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
 
     }
     public void take_picClick(View view) {
         Intent i= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(i,0);
+
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Bitmap b=(Bitmap) data.getExtras().get("data");
-        img.setImageBitmap(b);
+        if (b!=null) img.setImageBitmap(b);
+        img.setVisibility(1);
     }
 }
