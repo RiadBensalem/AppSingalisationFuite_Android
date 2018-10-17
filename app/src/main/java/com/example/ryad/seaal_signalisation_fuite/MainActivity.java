@@ -1,22 +1,22 @@
-package com.example.ryad.ggg;
+package com.example.ryad.seaal_signalisation_fuite;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
+    static boolean bool;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme_NoActionBar);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -54,29 +54,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void assgnClick(View view) {
-        Intent intent=new Intent(this,assgn_form.class);
+        Intent intent=new Intent(this,tabActivity.class);
+        this.bool=false;
         startActivity(intent);
+
 
     }
 
     public void fuiteClick(View view) {
-        Intent intent=new Intent(this,fuite_form.class);
+        Intent intent=new Intent(this,tabActivity.class);
+        this.bool=true;
         startActivity(intent);
     }
-
-    public static void sendClick(View view) {
-        /*int rbId = rg1.getCheckedRadioButtonId();
-        int rbId2=rg2.getCheckedRadioButtonId();
-        rb=(RadioButton) findViewById(rbId);
-        if (rbId>=0) Toast.makeText(this, rb.getText(), Toast.LENGTH_SHORT).show();
-        tv.setText(rb.getText());*/
-        Snackbar.make(view, "sent!", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
-
-
-    }
-
-
-
 
 }

@@ -5,31 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.ryad.ggg.MainActivity"
+    tools:context="com.example.ryad.seaal_signalisation_fuite.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:background="#90caf9">
+    android:background="@drawable/gradientstart">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:gravity="center">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="54dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/icon" />
+
         <Button
             android:id="@+id/fuite_form_button"
-            android:layout_width="220dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="signaler une fuite"
-            android:onClick="fuiteClick"
+            android:layout_margin="15dp"
             android:background="@drawable/custombutton"
-            android:layout_margin="15dp"/>
+            android:drawableLeft="@drawable/ic_pipe_leak"
+            android:fontFamily="@string/font_family_regular"
+            android:onClick="fuiteClick"
+            android:text="      fuite      "
+            android:textStyle="italic|bold" />
 
         <Button
             android:id="@+id/assgn_form_button"
-            android:layout_width="220dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="signaler un assignissment"
+            android:background="@drawable/custombutton"
+            android:drawableLeft="@drawable/ic_pipe_disconnected"
+            android:fontFamily="@string/font_family_regular"
             android:onClick="assgnClick"
-            android:background="@drawable/custombutton"/>
+            android:text=" fuite d'assignissment"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:fontFamily="@string/font_family_regular"
+            android:gravity="center_horizontal"
+            android:text="By ryad and moh"
+            android:textColor="@color/primary_text"
+            android:textStyle="italic" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
