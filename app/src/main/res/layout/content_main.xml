@@ -16,7 +16,8 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="54dp">
+        tools:layout_editor_absoluteY="54dp"
+        tools:ignore="MissingConstraints">
 
         <android.support.v7.widget.AppCompatImageView
             android:layout_width="300dp"
