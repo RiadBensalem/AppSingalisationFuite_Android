@@ -9,7 +9,7 @@
             android:width="1dp">
 
         </stroke>
-        <corners android:radius="50dp" />
+        <corners android:radius="100dp" />
         <padding
             android:left="10dp"
             android:right="10dp"
@@ -23,28 +23,23 @@
     <item
         >
         <shape>
-            <solid android:color="#1ece56"/>
+            <!--FF49A09D!-->
+            <solid android:color="#FF49A09D"/>
             <stroke
                 android:color="#5f2c82"
                 android:width="1dp">
 
             </stroke>
-            <corners android:radius="50dp"/>
+            <corners android:radius="100dp"/>
             <padding
-                android:left="10dp"
-                android:right="10dp"
-                android:top="10dp"
-                android:bottom="10dp"/>
-            <!--<gradient
-                android:angle="45"
-                android:centerX="35%"
-                android:startColor="#49a09d"
-                android:centerColor="#49A09D"
-                android:endColor="#5f2c82"
-                android:type="linear"
-                />!-->
+                android:left="5dp"
+                android:right="5dp"
+                android:top="5dp"
+                android:bottom="5dp"/>
+
 
         </shape>
+
 
     </item>
 </selector>

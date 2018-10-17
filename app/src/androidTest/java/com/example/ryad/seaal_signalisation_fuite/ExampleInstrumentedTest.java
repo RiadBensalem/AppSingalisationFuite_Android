@@ -1,4 +1,4 @@
-package com.example.ryad.ggg;
+package com.example.ryad.seaal_signalisation_fuite;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.ryad.ggg", appContext.getPackageName());
+        assertEquals("com.example.ryad.seaal_signalisation_fuite", appContext.getPackageName());
     }
 }
